@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --background-color: #01679C;
+    --primary-color: #00284C;
+    --secondary-color: #2A356D;
+    --three-color: #01989F;
+    --four-color: #00E5BC;
+    --color-text: #ffffff;
+    --display-color: #7a7676;
+}
+
+body {
+    min-height: 100vh;
+    color: var(--color-text);
+    background-color: var(--background-color);
+    display: grid;
+    place-items: center;
+}
+
+.calculator {
+    background-color: var(--primary-color);
+    color: var(--color-text);
+    width: 400px;
+    max-width: 100%;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: .5rem;
+}
+
+.display {
+    grid-column: 1 / -1;
+    padding: 1.8rem;
+    font-size: 2.5rem;
+    background-color: var(--display-color);
+    text-align: right;
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.btn {
+    background-color: var(--secondary-color);
+    color: var(--color-text);
+    border: none;
+    padding: 1.5rem .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .5rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.btn:hover {
+    background-color: var(--background-color);
+}
+
+#igual {
+    grid-row: span 2;
+    background-color: var(--three-color);
+}
+
+#igual:hover {
+    background-color: var(--four-color);
+}
